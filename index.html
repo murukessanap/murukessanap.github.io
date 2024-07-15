@@ -44,9 +44,9 @@ Lets assume all these information as matrices like user-movie rating as \(M_{um}
 </br>
     The optimization objective is to learn \(M_u\) and \(M_m\) in the following setting.
     </br></br>
-        \(M_up^T\) . \(M_m\) = \(M_{um}\)  and 
+        \(M_{up}^T\) . \(M_m\) = \(M_{um}\)  and (1)
     </br>
-        \(M_{mp}\) . \(M_u\) = \(M_{um}^T\)  and 
+        \(M_{mp}\) . \(M_u\) = \(M_{um}^T\)  and (2)
     </br></br>
 There are various ways to solve this optimization objective.
 </br>
@@ -54,11 +54,14 @@ One of them is through Gradient Descent Algorithm.
 </br>
 Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via gradient descent by minimizing the following loss function.
 </br></br>
-    \(E(M_{um}^p - M_{um})^2\)  condition i-th element in \(M_{um}\) is not empty
+    \(E(M_{um}^p - M_{um})^2\)  condition i-th element in \(M_{um}\) is not empty and where \(M_{um}^p\) is the predicted matrix. 
 
 </br>
 </br>
 </br>
+    They call this colloborative filtering since there is a colloboration of all users' ratings, user profile information and movie information for
+    getting the user the right recommendation. Also the practical implementation of gradient descent will be from solving (1) to (2) to (1) to (2) to (1) .....
+    </br></br>
     Have a wonderful recommendation !!!
 </body>
 </html>

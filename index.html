@@ -33,20 +33,20 @@ Lets assume all these information as matrices like user-movie rating as \(M_{um}
 </br>
     Now the target is to find missing ratings that are not given by the users for movies in \(M_{um}\)
     </br>
-    Lets say the dimensions of the matrices \(M_{um}\) is \(_{uxm}\), \(M_{up}\) is \(_{uxf1}\) and \(M_{mp}\) is \(_{mxf2}\)
+    Lets say the dimensions of the matrices \(M_{um}\) is \(_{uxm}\), \(M_{up}\) is \(_{f1xu}\) and \(M_{mp}\) is \(_{mxf2}\)
         </br>
         </br>
         Lets take weight matrices \(M_u\) and \(M_m\) that learns user features and movie features.
         </br>
-        Dimensions of \(M_u\) and \(M_m\) are \(_{f2xu}\) and \(_{f1xm}\) respectively.
+        Dimensions of \(M_m\) and \(M_u\) are \(_{f2xu}\) and \(_{f1xm}\) respectively.
 </br>
 </br>
 </br>
     The optimization objective is to learn \(M_u\) and \(M_m\) in the following setting.
     </br></br>
-        \(M_{up}^T\) . \(M_m\) = \(M_{um}\)  and (1)
+        \(M_{up}^T\) . \(M_u\) = \(M_{um}\)  and (1)
     </br>
-        \(M_{mp}\) . \(M_u\) = \(M_{um}^T\)  and (2)
+        \(M_{mp}\) . \(M_m\) = \(M_{um}^T\)  and (2)
     </br></br>
 There are various ways to solve this optimization objective.
 </br>
@@ -54,7 +54,8 @@ One of them is through Gradient Descent Algorithm.
 </br>
 Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via gradient descent by minimizing the following loss function.
 </br></br>
-    \(E(M_{um}^p - M_{um})^2\)  condition i-th element in \(M_{um}\) is not empty and where \(M_{um}^p\) is the predicted matrix. 
+    \(E(M_{um}^p - M_{um})^2\)  condition i-th element in \(M_{um}\) is not empty and where \(M_{um}^p\) is the predicted matrix and it is a sum of squarred errors of elementwise difference
+    in the predicted and real user movie ratings matrix. 
 
 </br>
 </br>

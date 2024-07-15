@@ -1,2 +1,0 @@
-# murukessanap.github.io
-aimAI

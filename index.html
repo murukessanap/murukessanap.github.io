@@ -30,22 +30,22 @@ Movie information is like the cast in the movie, genre, director, producing comp
 </br>
 </br>
 Lets assume all these information as matrices like user-movie rating as \(M_{um}\), user-profile as \(M_{up}\) and movie-profile as \(M_{mp}\)
-<\br>
+</br>
     Now the target is to find missing ratings that are not given by the users for movies in \(M_{um}\)
-    <\br>
+    </br>
     Lets say the dimensions of the matrices \(M_{um}\) is \(uxm\), \(M_{up}\) is \(uxf1\) and \(M_{mp}\) is \(mxf2\)
-        <\br>
-        <\br>
+        </br>
+        </br>
         Lets take weight matrices \(M_u\) and \(M_m\) that learns user features and movie features.
-        <\br>
+        </br>
         Dimensions of \(M_u\) and \(M_m\) are \(mxu\) and \(uxm\) respectively.
-<\br>
-<\br>
-<\br>
+</br>
+</br>
+</br>
     The optimization objective is to learn \(M_u\) and \(M_m\) in the following setting.
-    <\br>
+    </br>
         \(M_{um}\) . \(M_u\) = \(M_{up}\)  and 
-    <\br>
+    </br>
         \(M_{um}\) . \(M_m\) = \(M_{um}\)  and 
 
   

@@ -93,6 +93,14 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     over the increase of no of digits \(2^n\). Then think of the single bit having 10*8*7 possible states, then it could well possibly be \((10*8*7)^n\) states to end up in n amount of time.
     So to find the amount of information in so many possibilities one has to do logarithm, like if you have 8 numbers in a binary system then \(log_28=3\) there are 3 digital bits of information. If you have 
     \((10*8*7)^5\) states then \(log_{10*8*7}{10*8*7}^5=5\) resulting in 5 atoms being present in the inital state.
+
+</br>
+</br>
+    The mathematical beauty of Shannon's theory lies in quantifying information over the probability of the loss of information. Lets say the inital state of atoms are not deterministic but
+    probabilistic like there is a probability of 0.3 for say 1000 states, then 0.4 for say 2000 states and 0.3 for say 3000 states. Then the information in those possible states is 
+    \( 0.3*1000 + 0.4*2000 + 0.3*3000 = 2000 \). But how can you get that information by seeing the system evolve over time over loss of information like in transmitting information over 
+    any communication systems with a lot of probability of interference or error resulting in loss of information? So Shannon invented the formula 
+    \( Entropy = E_i p_i * log p_i \)
     
 </body>
 </html>

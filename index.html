@@ -100,8 +100,10 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     probabilistic like there is a probability of 0.3 for say 1000 states, then 0.4 for say 2000 states and 0.3 for say 3000 states. Then the information in those possible states is 
     \( 0.3*1000 + 0.4*2000 + 0.3*3000 = 2000 \). But how can you get that information by seeing the system evolve over time over loss of information like in transmitting information over 
     any communication systems with a lot of probability of interference or error resulting in loss of information? So Shannon invented the formula 
-    \( Entropy = \sum_i p_i * log (p_i) \)
-    
+</br>
+    \( Entropy = -\sum_i p_i * log (p_i) \)
+</br>
+    It is just the weighted sum of possible informative states or expectation of information in probability.
 </body>
 </html>
 

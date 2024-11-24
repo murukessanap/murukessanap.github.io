@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Planck Formula Visualization</title>
+    <title>Planck Black Body Radiation</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,12 +21,11 @@
     </style>
 </head>
 <body>
-    <h1>Planck Formula and Temperature</h1>
+    <h1>Planck Black Body Radiation Formula</h1>
     <label for="temperature">Select Temperature (K): </label>
-    <input type="range" id="temperature" min="100" max="6000" step="100" value="3000" oninput="updateTemperature(this.value)">
+    <input type="range" id="temperature" min="0" max="5000" step="100" value="3000" oninput="updateTemperature(this.value)">
     <span id="tempValue">3000</span> K
-    <div id="output"></div>
-    <canvas id="planckCanvas" width="1200" height="600"></canvas>
+    <canvas id="planckCanvas" width="1400" height="800"></canvas>
 
     <script>
         const h = 6.626e-34; // Planck's constant (J·s)
@@ -48,28 +47,28 @@
 
             // Draw axes
             ctx.beginPath();
-            ctx.moveTo(50, 350);
-            ctx.lineTo(750, 350); // X-axis
-            ctx.moveTo(50, 350);
-            ctx.lineTo(50, 50); // Y-axis
+            ctx.moveTo(75, 750); // X-axis starting point
+            ctx.lineTo(1350, 750); // X-axis end point
+            ctx.moveTo(75, 750); // Y-axis starting point
+            ctx.lineTo(75, 50); // Y-axis end point
             ctx.strokeStyle = '#000';
             ctx.stroke();
 
             // Labels
-            ctx.fillText("Wavelength (nm)", 375, 380);
-            ctx.fillText("Intensity", 10, 50);
+            ctx.fillText("Wavelength (nm)", 700, 780);
+            ctx.fillText("Intensity", 20, 60);
 
             // Plot Planck's formula
             ctx.beginPath();
             ctx.strokeStyle = '#ff5733';
             let prevX = null, prevY = null;
 
-            for (let i = 100; i <= 6000; i += 10) { // Wavelength in nm
+            for (let i = 100; i <= 3000; i += 10) { // Wavelength in nm
                 const wavelength = i * 1e-9; // Convert nm to meters
-                const intensity = planckFormula(wavelength, temperature);
+                const intensity = temperature > 0 ? planckFormula(wavelength, temperature) : 0;
 
-                const x = 75 + (i - 100) / 5; // Scale wavelength to canvas
-                const y = 350 - Math.min(intensity * 1e-9, 300); // Scale intensity to canvas
+                const x = 75 + (i - 100) / 2; // Scale wavelength to canvas
+                const y = 750 - Math.min(intensity * 1e-9, 700); // Scale intensity to canvas
 
                 if (prevX !== null && prevY !== null) {
                     ctx.lineTo(x, y);

@@ -26,7 +26,7 @@
     <input type="range" id="temperature" min="100" max="6000" step="100" value="3000" oninput="updateTemperature(this.value)">
     <span id="tempValue">3000</span> K
     <div id="output"></div>
-    <canvas id="planckCanvas" width="1200" height="1200"></canvas>
+    <canvas id="planckCanvas" width="1200" height="600"></canvas>
 
     <script>
         const h = 6.626e-34; // Planck's constant (J·s)
@@ -64,11 +64,11 @@
             ctx.strokeStyle = '#ff5733';
             let prevX = null, prevY = null;
 
-            for (let i = 100; i <= 3000; i += 10) { // Wavelength in nm
+            for (let i = 100; i <= 6000; i += 10) { // Wavelength in nm
                 const wavelength = i * 1e-9; // Convert nm to meters
                 const intensity = planckFormula(wavelength, temperature);
 
-                const x = 50 + (i - 100) / 3; // Scale wavelength to canvas
+                const x = 75 + (i - 100) / 5; // Scale wavelength to canvas
                 const y = 350 - Math.min(intensity * 1e-9, 300); // Scale intensity to canvas
 
                 if (prevX !== null && prevY !== null) {

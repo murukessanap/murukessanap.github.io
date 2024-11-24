@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Planck Formula Visualization</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        #output {
+            margin-top: 20px;
+            font-size: 1.2em;
+        }
+        canvas {
+            margin-top: 20px;
+            border: 1px solid #ccc;
+        }
+    </style>
+</head>
+<body>
+    <h1>Planck Formula and Temperature</h1>
+    <label for="temperature">Select Temperature (K): </label>
+    <input type="range" id="temperature" min="100" max="6000" step="100" value="3000" oninput="updateTemperature(this.value)">
+    <span id="tempValue">3000</span> K
+    <div id="output"></div>
+    <canvas id="planckCanvas" width="800" height="400"></canvas>
+
+    <script>
+        const h = 6.626e-34; // Planck's constant (J·s)
+        const c = 3.0e8; // Speed of light (m/s)
+        const k = 1.381e-23; // Boltzmann constant (J/K)
+
+        const canvas = document.getElementById('planckCanvas');
+        const ctx = canvas.getContext('2d');
+
+        function planckFormula(wavelength, temperature) {
+            // Wavelength in meters, temperature in Kelvin
+            const numerator = (2 * h * c ** 2) / (wavelength ** 5);
+            const denominator = Math.exp((h * c) / (wavelength * k * temperature)) - 1;
+            return numerator / denominator;
+        }
+
+        function drawGraph(temperature) {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+            // Draw axes
+            ctx.beginPath();
+            ctx.moveTo(50, 350);
+            ctx.lineTo(750, 350); // X-axis
+            ctx.moveTo(50, 350);
+            ctx.lineTo(50, 50); // Y-axis
+            ctx.strokeStyle = '#000';
+            ctx.stroke();
+
+            // Labels
+            ctx.fillText("Wavelength (nm)", 375, 380);
+            ctx.fillText("Intensity", 10, 50);
+
+            // Plot Planck's formula
+            ctx.beginPath();
+            ctx.strokeStyle = '#ff5733';
+            let prevX = null, prevY = null;
+
+            for (let i = 100; i <= 3000; i += 10) { // Wavelength in nm
+                const wavelength = i * 1e-9; // Convert nm to meters
+                const intensity = planckFormula(wavelength, temperature);
+
+                const x = 50 + (i - 100) / 3; // Scale wavelength to canvas
+                const y = 350 - Math.min(intensity * 1e-9, 300); // Scale intensity to canvas
+
+                if (prevX !== null && prevY !== null) {
+                    ctx.lineTo(x, y);
+                } else {
+                    ctx.moveTo(x, y);
+                }
+
+                prevX = x;
+                prevY = y;
+            }
+            ctx.stroke();
+        }
+
+        function updateTemperature(temp) {
+            document.getElementById('tempValue').innerText = temp;
+            drawGraph(temp);
+        }
+
+        // Initialize the graph
+        drawGraph(3000);
+    </script>
+</body>
+</html>

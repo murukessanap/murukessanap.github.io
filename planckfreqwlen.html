@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spectral Radiance Graphs</title>
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+</head>
+<body>
+    <h1>Spectral Radiance Graphs</h1>
+    <label for="temperature-slider">Temperature (K): <span id="temperature-label">3000</span></label>
+    <input type="range" id="temperature-slider" min="500" max="10000" value="3000" step="100">
+    <div id="wavelength-graph" style="width: 600px; height: 400px;"></div>
+    <div id="frequency-graph" style="width: 600px; height: 400px;"></div>
+
+    <script>
+        // Constants
+        const h = 6.626e-34; // Planck's constant (Js)
+        const c = 3.0e8; // Speed of light (m/s)
+        const k = 1.381e-23; // Boltzmann constant (J/K)
+
+        function spectralRadianceWavelength(wavelength, temperature) {
+            return (2 * h * c ** 2) / (wavelength ** 5 * (Math.exp((h * c) / (wavelength * k * temperature)) - 1));
+        }
+
+        function spectralRadianceFrequency(frequency, temperature) {
+            return (2 * h * frequency ** 3) / (c ** 2 * (Math.exp((h * frequency) / (k * temperature)) - 1));
+        }
+
+        function updateGraphs(temperature) {
+            const wavelengths = Array.from({ length: 100 }, (_, i) => (i + 1) * 1e-7); // 100 nm to 10,000 nm
+            const frequencies = Array.from({ length: 100 }, (_, i) => (i + 1) * 1e13); // 10^13 Hz to 10^15 Hz
+
+            const radiancesWavelength = wavelengths.map(wl => spectralRadianceWavelength(wl, temperature));
+            const radiancesFrequency = frequencies.map(freq => spectralRadianceFrequency(freq, temperature));
+
+            Plotly.react('wavelength-graph', [{
+                x: wavelengths.map(wl => wl * 1e9), // Convert to nm
+                y: radiancesWavelength,
+                type: 'scatter',
+                mode: 'lines',
+                name: 'Spectral Radiance'
+            }], {
+                title: 'Spectral Radiance vs Wavelength',
+                xaxis: { title: 'Wavelength (nm)' },
+                yaxis: { title: 'Spectral Radiance (W/m^2/sr/m)' }
+            });
+
+            Plotly.react('frequency-graph', [{
+                x: frequencies,
+                y: radiancesFrequency,
+                type: 'scatter',
+                mode: 'lines',
+                name: 'Spectral Radiance'
+            }], {
+                title: 'Spectral Radiance vs Frequency',
+                xaxis: { title: 'Frequency (Hz)' },
+                yaxis: { title: 'Spectral Radiance (W/m^2/sr/Hz)' }
+            });
+        }
+
+        document.getElementById('temperature-slider').addEventListener('input', event => {
+            const temperature = event.target.value;
+            document.getElementById('temperature-label').textContent = temperature;
+            updateGraphs(temperature);
+        });
+
+        // Initial Graph Rendering
+        updateGraphs(3000);
+    </script>
+</body>
+</html>

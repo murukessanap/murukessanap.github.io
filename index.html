@@ -210,16 +210,44 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     This leads to an indeterminate solution when the limit x->0, like (1+inf)^0. So to solve one need to use logarithm
 
     </br><div class="box">
-    \( log(y) = Lt_{x->inf}[x log(1+1/x)] \)</div> </br>
+    \( log(y) = Lt_{x->inf}[(1/x) log(1+x)] \)</div> </br>
     <div class="box">
-    \(       = Lt_{z->0}[log(1+z)/z] \) </div> where z = 1/x </br>
+    \(       = Lt_{x->inf}[log(1+x)/x] \) </div> </br>
     <div class="box">
-    \(       = Lt_{z->0}(1/(1+z)) \) </div></br>
+    \(       = Lt_{x->inf}(1/(1+x)) \) </div></br>
     <div class="box">
-    \(       = 1 \) </div></br>
+    \(       = 0 \) </div></br>
     Apply L.Hospital's Rule  
+    This makes one think log reduces an entire function to zero, which is the equivalent that any base to this log function turns zero. To make any number zero it should be
+    powered with -inf which is y turns -inf which is trivial for closed-form convergence
     </br>
 
+    </br><div class="box">
+    \( log(y) = Lt_{x->0}[x log(1+1/x)] \)</div> </br>
+    <div class="box">
+    \(       = Lt_{x->0}[log(1+1/x)/(1/x)] \) </div> </br>
+    let z = 1/x
+    <div class="box">
+    \(       = Lt_{z->inf}[log(1+z)/z] \) </div> </br>
+    <div class="box">
+    \(       = Lt_{z->inf}(1/(1+z)) \) </div></br>
+    <div class="box">
+    \(       = 0 \) </div></br>
+    Apply L.Hospital's Rule 
+    Again trivial for closed-form solutions
+
+    </br><div class="box">
+    \( log(y) = Lt_{x->0}[(1/x) log(1+x)] \)</div> </br>
+    <div class="box">
+    \(       = Lt_{x->0}[log(1+x)/x] \) </div> </br>
+    <div class="box">
+    \(       = Lt_{x->0}[log(1+x)/x] \) </div> </br>
+    <div class="box">
+    \(       = Lt_{x->0}(1/(1+x)) \) </div></br>
+    <div class="box">
+    \(       = 1 \) </div></br>
+    Apply L.Hospital's Rule 
+    
     Which indicates that y turns zero with a log for any base. This gives the logarithm base independent nature but makes y zero even when applied to any base number
     which makes log(y)= 1 always. 
 

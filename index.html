@@ -293,8 +293,8 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     values as the edges in the graph or the distance between the nodes, Also note that an NP-Complete problem is polynomially verifiable in computing time. Like if you define the minimum distance 
     between any two nodes as 1 then the final solution must be equal to the of cities to be traveled and returned back to the source. Now if you see the solution space for the 
     entire analytical solution think of adjacency matrix columns to be ordered from the start city to cover all cities in the travel in adjacent routes to again return to the start city. 
-    If there are n cities in the graph and there are k cities to be covered one has to search the possibilities of (\ nP_k \) which is permutation (\ n!/(n-k)! \) and for analytical solution 
-    to reach fully closed form one should limit to maximum like the function be
+    If there are n cities in the graph and there are k cities to be covered one has to search the possibilities of (\ nP_k \) which is a permutation (\ n!/(n-k)! \) and for analytical solution 
+    to reach a fully closed form one should limit to a maximum like the function be
 
     <div class="box">
         (\ y = Lt_{n->inf,k->n}[n!/(n-k)!] \)
@@ -302,6 +302,14 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     <div class="box">
         (\ = Lt_{n->inf}[n!] \)
     </div>
+    There is no closed-form solution exists to this limit function due to it diverges to infinity and needs Sterling's approximation for precision. Also, it is surely a greater limit than ever 
+    (\ 2^n) 
+    <div class="box">
+        Lt_{n->inf}[n!/2^n] -> inf 
+    </div>
+
+    Surely diverges for (\ e^n \) which means the closed analytical solution is nearly impossible. Also, even the approximations are limited by the decimal precision of memory if you think
+    the higher in n solutions. 
     
 </body>
 </html>

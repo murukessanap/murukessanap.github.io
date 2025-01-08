@@ -236,8 +236,10 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     \( log(e) = 1 \) </div></br>
 
     This defines a new constant in the logarithm. This constant unifies all bases in the logarithm, and if you see it also defines the inverse in the logarithmic base if you
-    multiply \( log_e(b) \) with \( log_b(x) \) it gives \( log_e(x) \) which is independent of its base due to \( log(e)=1 \) being the unity in the log base group algebra 
-
+    multiply \( log_e(b) \) with \( log_b(x) \), it gives \( log_e(x) \), which is independent of its base due to \( log(e)=1 \) being the unity in the log base group algebra.
+    Logarithmic inverse turned out to be an infinite series if you keep on multiplying term after term approaching infinity and, therefore, more and more decimal points.
+    </br>
+    
     Let us introduce a variable for e and a new function. 
 
     </br>
@@ -269,6 +271,27 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     </br>
     <div class="box">
     \( y^{'''} = y^{''} \) </div> </br>
+
+    It is a unity in differentiation, a least soluble analytical solution of exponential functions that are hard to solve. Even if you have a different base
+    for log like the equation \( y = a^x \) then \( log(y) = xlog_e(a) \), it leads to x not disappearing in the differential equation reducing the independent
+    variable to a function y. It leads to dependence between two variables getting into a single non-linear differential equation and more dependency in further 
+    differentiation of the same. This makes one think that e is the most elegant solution for the non-linear differential equation. But e itself requires the Taylor series
+    for approximation of at least ten terms to do calculations of more precision. If you think of any more analytical equations like non-linear differential equations like
+    (\ y=a^x \) itself requires log and e for most precision. It defines the precision limit in solving analytical complete closed-form solutions to switch from 
+    numerical methods to approximation to neural networks with universal approximation. 
+
+    </br>
+    Let us link it with a known NP-complete problem, Travelling Salesman Problem{TSP}, in which a graph is defined with edges and weights. Nodes are cities connected in the graph and
+    the edges are adjacent cities with weights as travel distance between them. The problem is to find a route by starting from a single city and covering all given cities to 
+    return back to the start city by covering the minimum distance. They say this problem is NP-complete due to no known existing polynomial algorithm with a Deterministic Turing
+    machine has been found yet, and founding even one such algorithm will lead to a polynomial solution to all NP-complete problems. Therefore P=NP. NP is a non deterministically 
+    polynomial; if you have a choice() function that does choose on its own without a calculation, then this problem is polynomial. If P=NP, most of your daily need 
+    computing power can well be taken from the mobile itself and not require heavy processing servers GPUs cloud which can be minimal for networking. But P!=NP approximation numerical
+    solutions are a must for more complex functions.
+    </br>
+    If you take TSP, it is defined in memory by an adjacency matrix of nodes in columns and rows as a square matrix of nxn where n is the no of nodes in the graph with all the matrix
+    values as the edges in the graph or the distance between the nodes, Also note that a NP-Complete problem is polynomially verifiable in computing time. Like if you define minimum distance 
+    between any two nodes as 1 then the final solution must be equal to no of cities to be travelled and returned back to the source.
 
     
     

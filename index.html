@@ -179,9 +179,43 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     Inverse of any number being existent like 0 don't have inverse only infinity and other inverses like cube roots are difficult to calculate. So to make the 
     function complete in divisional inverse one need to take into account n turning 1/n and vice versa. So function should be studied for 
 
-    \( y = Lt_{x->0}(1+1/x)^x \)
+    \( y = Lt_{x->inf}(1+1/x)^x \)
 
-    This leads to an indeterminate solution when applied the limit x->0 like (1+inf)^0. So 
+    This leads to an indeterminate solution when applied the limit x->0 like (1+inf)^0. So to solve one need to use logarithm
+
+    \( log y = Lt_{x->inf}[x log (1+1/x)] \)
+    \(       = Lt_{z->0}[log (1+z) / z] \) where z = 1/x
+    \(       = Lt_{z->0}(1/(1+z)) \) Apply L.Hospital's Rule
+    \(       = 1 \)
+
+    which indicates y turns zero with log for any base. This gives the logarithm base independent nature but making y zero even when applied to any base number
+    which makes log y= 1 always. 
+
+    \( log [Lt_{x->inf}[(1+1/x)^x]] = 1 \)
+
+    \( Lt_{x->inf}[(1+1/x)^x] = e \)
+
+    \( log e = 1 \)
+
+    Let us introduce a variable for e and a new function. 
+
+    \( y = e^x \)
+
+    \( log y = x log e \)
+
+    \( log y = x \)
+
+    Differentiating the equation we get
+
+    \( (1/y)y^' = 1 \)
+ 
+    \( y^' = y \)
+
+    \( y^{''} = y^' \)
+
+    \( y^{'''} = y^{''} \)
+
+    
     
 </body>
 </html>

@@ -273,11 +273,13 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     \( y^{'''} = y^{''} \) </div> </br>
 
     It is a unity in differentiation, a least soluble analytical solution of exponential functions that are hard to solve. Even if you have a different base
-    for log like the equation \( y = x^x \) then \( log(y) = xlog_e(x) \), it leads to x not disappearing in the differential equation reducing the independent
+    for log like the equation 
+    \( y = x^x \) then 
+    \( log(y) = xlog_e(x) \), it leads to x not disappearing in the differential equation reducing the independent
     variable to a function y. It leads to dependence between two variables getting into a single non-linear differential equation and more dependency in further 
     differentiation of the same. This makes one think that e is the most elegant solution for the non-linear differential equation. But e itself requires the Taylor series
     for approximation of at least ten terms to do calculations of more precision. If you think of any more analytical equations like non-linear differential equations like
-    (\ y=a^x \) itself requires log and e for most precision. It defines the precision limit in solving analytical complete closed-form solutions to switch from 
+    \( y=a^x \) itself requires log and e for most precision. It defines the precision limit in solving analytical complete closed-form solutions to switch from 
     numerical methods to approximation to neural networks with universal approximation. 
 
     </br>
@@ -293,7 +295,9 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     values as the edges in the graph or the distance between the nodes, Also note that an NP-Complete problem is polynomially verifiable in computing time. Like if you define the minimum distance 
     between any two nodes as 1 then the final solution must be equal to the of cities to be traveled and returned back to the source. Now if you see the solution space for the 
     entire analytical solution think of adjacency matrix columns to be ordered from the start city to cover all cities in the travel in adjacent routes to again return to the start city. 
-    If there are n cities in the graph and there are k cities to be covered one has to search the possibilities of (\ nP_k \) which is a permutation (\ n!/(n-k)! \) and for analytical solution 
+    If there are n cities in the graph and there are k cities to be covered one has to search the possibilities of 
+    \( nP_k \) which is a permutation 
+    \( n!/(n-k)! \) and for an analytical solution 
     to reach a fully closed form one should limit to a maximum like the function be
 
     <div class="box">
@@ -303,12 +307,13 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
          = Lt_{n->inf}[n!] 
     </div>
     There is no closed-form solution exists to this limit function due to it diverges to infinity and needs Sterling's approximation for precision. Also, it is surely a greater limit than ever 
-    (\ 2^n \) 
+    \( 2^n \) 
     <div class="box">
         Lt_{n->inf}[n!/2^n] -> inf 
     </div>
 
-    Surely diverges for (\ e^n \) which means the closed analytical solution is nearly impossible. Also, even the approximations are limited by the decimal precision of memory if you think
+    Surely diverges for 
+    \( e^n \) which means the closed analytical solution is nearly impossible. Also, even the approximations are limited by the decimal precision of memory if you think
     the higher in n solutions. Also, Taylor's series till infinity is required to form a closed-form solution from a point space like the smart city. It makes one conclude TSP is not Polynomial for the reason of decimal precision requirement to infinity for fully closed form solution for at least e in memory. 
     Also even though superposition in Qubits in Quantum computing allows for more states at once for a choice function again its memory is limited by the no of qubits possible in real quantum 
     computers. So I would like to conclude P!=NP when the problem grows to infinity therefore no closed-form solution. 

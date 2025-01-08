@@ -290,9 +290,15 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     solutions are a must for more complex functions.
     </br>
     If you take TSP, it is defined in memory by an adjacency matrix of nodes in columns and rows as a square matrix of nxn where n is the no of nodes in the graph with all the matrix
-    values as the edges in the graph or the distance between the nodes, Also note that a NP-Complete problem is polynomially verifiable in computing time. Like if you define minimum distance 
-    between any two nodes as 1 then the final solution must be equal to no of cities to be travelled and returned back to the source.
+    values as the edges in the graph or the distance between the nodes, Also note that an NP-Complete problem is polynomially verifiable in computing time. Like if you define the minimum distance 
+    between any two nodes as 1 then the final solution must be equal to the of cities to be traveled and returned back to the source. Now if you see the solution space for the 
+    entire analytical solution think of adjacency matrix columns to be ordered from the start city to cover all cities in the travel in adjacent routes to again return to the start city. 
+    If there are n cities in the graph and there are k cities to be covered one has to search the possibilities of (\ nP_k \) which is permutation (\ n!/(n-k)! \) and for analytical solution 
+    to reach fully closed form one should limit to maximum like the function be
 
+    <div class="box">
+        (\ y = Lt_{n->inf,n->k}[n!/(n-k)!] \)
+    </div>
     
     
 </body>

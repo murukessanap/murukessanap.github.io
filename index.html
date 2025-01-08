@@ -158,7 +158,7 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     interest is 1000*1/100 = 10$ but the next month principal for calculation is 1010$ so 1010*1/100 = 10.1$ so the next next month principal for calculation is 1020.1 $ so it keeps on
     accruing every month by the formula 
 
-     \( A = P \times (1+r/n)^{n \times t} \) \
+     \( A = P \times (1+r/n)^{n \times t} \) </br>
 
     Where A is the future value, P is the Principal, r is the rate of interest annually, n is the no of times interest is compounded per year, t is the no of years of
     investment. In our case A = 1000 *(1+0.12/1)^1 = 1120$. But if you calculate for n being more that every year interest calculated for say 3 times and for 4 years 
@@ -169,51 +169,51 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     set on a mission to solve this problem. He realised one need to find the functional solution given the highest limit to the problem which is 100\% interest annually
     and every year no of interest calculations reaching infinity. So the function for interest fraction to be multiplied with principal becomes 
 
-    \( y = Lt_{n->inf}(1+1/n)^n \) \
+    \( y = Lt_{n->inf}(1+1/n)^n \) </br>
 
     If you substitute the limit n=inf y = 1 but it won't be the case for n will approach infinity but won't be exact infinity in any real calculation to banking
     business. Also there is a paradox of division and its inverse in the very function. For if you substitute x = 1\n, we get
 
-    \( y = Lt_{x->0}(1+x)^(1/x) \) \
+    \( y = Lt_{x->0}(1+x)^(1/x) \) </br>
 
     Inverse of any number being existent like 0 don't have inverse only infinity and other inverses like cube roots are difficult to calculate. So to make the 
     function complete in divisional inverse one need to take into account n turning 1/n and vice versa. So function should be studied for 
 
-    \( y = Lt_{x->inf}(1+1/x)^x \)  \
+    \( y = Lt_{x->inf}(1+1/x)^x \)  </br>
 
     This leads to an indeterminate solution when applied the limit x->0 like (1+inf)^0. So to solve one need to use logarithm
 
-    \( log y = Lt_{x->inf}[x log (1+1/x)] \) \
-    \(       = Lt_{z->0}[log (1+z) / z] \) where z = 1/x \
-    \(       = Lt_{z->0}(1/(1+z)) \) Apply L.Hospital's Rule \
-    \(       = 1 \) \
+    \( log y = Lt_{x->inf}[x log (1+1/x)] \) </br>
+    \(       = Lt_{z->0}[log (1+z) / z] \) where z = 1/x </br>
+    \(       = Lt_{z->0}(1/(1+z)) \) Apply L.Hospital's Rule </br>
+    \(       = 1 \) </br>
 
     which indicates y turns zero with log for any base. This gives the logarithm base independent nature but making y zero even when applied to any base number
     which makes log y= 1 always. 
 
-    \( log [Lt_{x->inf}[(1+1/x)^x]] = 1 \) \
+    \( log [Lt_{x->inf}[(1+1/x)^x]] = 1 \) </br>
 
-    \( Lt_{x->inf}[(1+1/x)^x] = e \) \
+    \( Lt_{x->inf}[(1+1/x)^x] = e \) </br>
 
-    \( log e = 1 \) \
+    \( log e = 1 \) </br>
 
     Let us introduce a variable for e and a new function. 
 
-    \( y = e^x \) \
+    \( y = e^x \) </br>
 
-    \( log y = x log e \) \
+    \( log y = x log e \) </br>
 
-    \( log y = x \) \
+    \( log y = x \) </br>
 
     Differentiating the equation we get
 
-    \( (1/y)y^{'} = 1 \) \
+    \( (1/y)y^{'} = 1 \) </br>
  
-    \( y^{'} = y \) \
+    \( y^{'} = y \) </br>
 
-    \( y^{''} = y^{'} \)
+    \( y^{''} = y^{'} \) </br>
 
-    \( y^{'''} = y^{''} \)
+    \( y^{'''} = y^{''} \) </br>
 
     
     

@@ -210,9 +210,11 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     This leads to an indeterminate solution when applied the limit x->0 like (1+inf)^0. So to solve one need to use logarithm
 
     </br><div class="box">
-    \( log y = Lt_{x->inf}[x log (1+1/x)] \) </br>
-    \(       = Lt_{z->0}[log (1+z) / z] \) where z = 1/x </br>
-    \(       = Lt_{z->0}(1/(1+z)) \) Apply L.Hospital's Rule </br>
+    \( log y = Lt_{x->inf}[x log (1+1/x)] \)</div> </br>
+    <div class="box">
+    \(       = Lt_{z->0}[log (1+z) / z] \) where z = 1/x </div> </br>
+    <div class="box">
+    \(       = Lt_{z->0}(1/(1+z)) \) Apply L.Hospital's Rule  </br>
     \(       = 1 \) 
     </div></br>
 

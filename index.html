@@ -365,7 +365,7 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     If there are n cities in the graph and there are k cities to be covered one has to search the possibilities of 
     \( nP_k \) which is a permutation 
     \( n!/(n-k)! \) and for an analytical solution 
-    to reach a fully closed form one should limit to a maximum like the function be
+    to reach a fully closed form, one should limit to a maximum like the function be
 
     <div class="box">
         \( y = Lt_{n->inf,k->n}[n!/(n-k)!]  \)
@@ -380,12 +380,34 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     </div>
 
     Surely diverges for 
-    \( e^n \) which means the closed analytical solution is nearly impossible. Also, even the approximations are limited by the decimal precision of memory if you think
+    \( e^n \), which means the closed analytical solution is nearly impossible. Also, even the approximations are limited by the decimal precision of memory if you think
     the higher in n solutions. Also, Taylor's series till infinity is required to form a closed-form solution from a point space like the smart city. It makes one conclude TSP is not Polynomial for the reason of decimal precision requirement to infinity for fully closed form solution for at least e in memory. 
-    Also even though superposition in Qubits in Quantum computing allows for more states at once for a choice function again its memory is limited by the no of qubits possible in real quantum 
-    computers. So I would like to conclude P!=NP when the problem grows to infinity therefore no closed-form solution. 
+    Also, even though superposition in Qubits in Quantum computing allows for more states at once for a choice function again, its memory is limited by the no of qubits possible in real quantum 
+    computers. So I would like to conclude P!=NP when the problem grows to infinity; therefore no closed-form solution. 
     </br>
     Thanks to the Euler and Bernoulli family for a rich wealth of mathematics at such an early age.
+
+    Euler also had other ways to link numerical methods with the logarithmic constant e. Let me elucidate
+
+    if you assume an exponential function with the following properties
+    <div class="box">
+       \( y = e^x y^'=y \)
+    </div>
+
+    Where e is a constant to be found out. Let us see how this function behaves in Taylor's series
+
+    Taylor's series is
+    <div class="box">
+       \( y = y(a) + y^'(a)(x-a) + y^{''}(a)(x-a)^2/2! + y^{'''}(a)(x-a)^3/3!.... \)
+    </div>
+
+    <div class="box">
+       \( y = E_{n=0}^{inf}[y^n(a)(x-a)^n/n!] \)
+    </div>
+    when y=y^n due to assumption y^'=y
+    <div class="box">
+       \( y = y(a)*E_{n=0}^{inf}[y(x-a)^n/n!] \)
+    </div>
     
 </body>
 </html>

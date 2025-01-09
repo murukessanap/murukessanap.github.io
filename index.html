@@ -397,9 +397,8 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     Where e is a constant to be found out. Let us see how this function behaves in Taylor's series
 
     Taylor's series is
-    <div class="box">
-       \( y = y(a) + y^{'}(a)(x-a) + y^{''}(a)(x-a)^2/2! + y^{'''}(a)(x-a)^3/3!.... \)
-    </div>
+    
+    \( y = y(a) + y^{'}(a)(x-a) + y^{''}(a)(x-a)^2/2! + y^{'''}(a)(x-a)^3/3!.... \)
 
     <div class="box">
        \( y = E_{n=0}^{inf}[y^n(a)(x-a)^n/n!] \)
@@ -408,7 +407,18 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     <div class="box">
        \( y = y(a)*E_{n=0}^{inf}[(x-a)^n/n!] \)
     </div>
-    
+
+    But y(0)=1,
+    <div class="box">
+       \( y = E_{n=0}^{inf}[x^n/n!] \)
+    </div>
+    <div class="box">
+       \( e^x = E_{n=0}^{inf}[x^n/n!] \)
+    </div>
+    <div class="box">
+       \( e = E_{n=0}^{inf}[1/n!] \)
+    </div>
+    If you sum even five terms 1+1+1/2+1/6+1/24+1/120 = 2.7166666... which is correct up to two decimal points
 </body>
 </html>
 

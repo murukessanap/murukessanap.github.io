@@ -401,11 +401,19 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     repeated differentiation so it is numerical to calculate the precision of e by numerical methods. Let's see another example of circle equations like \( x^2 + y^s = r^2 \). Its differential limit 
     never reduces to zero. Also, know that introducing a differential limit means one should have a function with an independent variable, so at least two-dimensional space.
 
-    When you differentiate \( x^n \) repeatedly n times, it gives n!; when you repeat one more time, it goes to zero due to n being a constant. Let's apply limit of differentiation to factorial of x.
+    When you differentiate \( x^n \) repeatedly n times, it gives n!; when you repeat one more time, it goes to zero due to n being a constant. Let's apply the limit of differentiation to the factorial of x.
 
     <div class="box">
        \( Lt_{d()->0}[x!] -> ? \)
     </div>
+
+    If one can compare it with other converging limits like \( x^n \), one needs to define the unity of differential limit due to the division of functions required in limit comparison.
+
+    <div class="box">
+       \( Lt_{d()->0}[f(x)] -> f(x) \)
+    </div>
+
+    This unity of differential limit turns out to be \( e^x \)
 
     One needs to do a limit comparison test, but does a limit comparison test work for differential limits? 
     

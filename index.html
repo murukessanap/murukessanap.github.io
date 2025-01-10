@@ -381,7 +381,7 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
 
     Surely diverges for 
     \( e^n \), which means the closed analytical solution is nearly impossible. Also, even the approximations are limited by the decimal precision of memory if you think
-    the higher in n solutions. Also, Taylor's series till infinity is required to form a closed-form solution from a point space like the smart city. It makes one conclude TSP is not Polynomial for the reason of decimal precision requirement to infinity for fully closed form solution for at least e in memory. 
+    the higher in n solutions. Also, Taylor's series till infinity is required to form a closed-form solution from a point space like the start city. It makes one conclude TSP is not Polynomial for the reason of decimal precision requirement to infinity for fully closed form solution for at least e in memory. 
     Also, even though superposition in Qubits in Quantum computing allows for more states at once for a choice function again, its memory is limited by the no of qubits possible in real quantum 
     computers. So I would like to conclude P!=NP when the problem grows to infinity; therefore no closed-form solution. 
     </br>
@@ -398,8 +398,8 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     </div>
 
     With this definition, let's see some examples of nonclosed forms that need numerical approximation solutions. First, let's see the \( e^x \) Euler exponential function. It never reduces in even
-    repeated differentiation so it is numerical to calculate the precision of e by numerical methods. Let's see another example of circle equations like \( x^2 + y^s = r^2 \). Its differential limit 
-    never reduces to zero. Also, know that introducing a differential limit means one should have a function with an independent variable, so at least two-dimensional space.
+    repeated differentiation so it is numerical to calculate the precision of e by numerical methods. Let's see another example of circle equations like \( x^2 + y^2 = r^2 \). Its differential limit 
+    never reduces to zero therefore Pi in all circle equations. Also, know that introducing a differential limit means one should have a function with an independent variable, so at least two-dimensional space.
 
     When you differentiate \( x^n \) repeatedly n times, it gives n!; when you repeat one more time, it goes to zero due to n being a constant. Let's apply the limit of differentiation to the factorial of x.
 
@@ -416,9 +416,12 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     This unity of differential limit turns out to be \( e^x \)
 
     One needs to do a limit comparison test, but does a limit comparison test work for differential limits? 
-    By induction, one can prove the following
+    By induction, one can prove the following if \( y=f_{1}(x)...f_{i-1}(x)f_{i}(x)f_{i+1}(x)...f_{n}(x) \) 
+    <\br>
     \( y^{'}=E_{i=1}^{n}[f_{1}(x)...f_{i-1}(x)f_{i}^{'}(x)f_{i+1}(x)...f_{n}(x)] \)
-    when all \( f_{i}(x) \) are all single-degree polynomials that are linear equations. \( { y^{'} \) reduces in degree by one for each successive differentiation of the 
+    when all \( f_{i}(x) \) are all single-degree polynomials that are linear equations. 
+    
+    \( { y^{'} \) reduces in degree by one for each successive differentiation of the 
     polynomial. Which gets reduced to zero unless the degree of the polynomial itself is a variable, even x.
 
    so

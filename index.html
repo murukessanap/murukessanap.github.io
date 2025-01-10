@@ -417,8 +417,8 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
 
     One needs to do a limit comparison test, but does a limit comparison test work for differential limits? 
     By induction, one can prove the following
-    \( y^{'}=E_{i=1}^{n}[f_{1}(x)...f_{i-1}(x)f_{i}^{'}(x)f_{i+1}(x)...f_{n}(x)]
-    when all f_{i}(x) are all single-degree polynomials that are linear equations. \{ y^{'} reduces in degree by one for each successive differentiation of the 
+    \( y^{'}=E_{i=1}^{n}[f_{1}(x)...f_{i-1}(x)f_{i}^{'}(x)f_{i+1}(x)...f_{n}(x)] \)
+    when all \( f_{i}(x) \) are all single-degree polynomials that are linear equations. \( { y^{'} \) reduces in degree by one for each successive differentiation of the 
     polynomial. Which gets reduced to zero unless the degree of the polynomial itself is a variable, even x.
 
    so
@@ -453,9 +453,24 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
        \( Lt_{x->inf} log(y) = 0 -> ? \)
     </div>
 
-    This makes y always 1 in \( Lt_{x->inf}Lt_{d()->0}(y) \). This defines a limit for closed-form solutions to exist. Like if y cannot be reduced to zero then 
+    This makes y always 1 in 
+    \( Lt_{x->inf}Lt_{d()->0}(y) \). This defines a limit for closed-form solutions to exist. Like if y cannot be reduced to zero then 
     one cannot even form a analytical solution for the equation. Even tough one can imagine all possible combinations of mathematical known functions. Therefore,
     approximation and numerical solutions are always a must for non-closed-form solutions.
+
+    Also, if you see the Gaussian integral
+    <div class="box">
+       \( y = In [e^{-x^2}dx] \)
+    </div>
+
+    No analytical solution exists to date. When you take 
+    \( z = y^{'] = e^{-x^2} \)
+
+    <div class="box">
+       \( Lt_{d()->0} z != 0 -> ? \)
+    </div>
+
+    It makes the Gaussian integral have no analytical closed-form solution 
 
     Euler also had other ways to link numerical methods with the logarithmic constant e. Let me elucidate
 

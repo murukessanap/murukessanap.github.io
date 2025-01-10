@@ -421,8 +421,41 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     when all f_{i}(x) are all single-degree polynomials that are linear equations. \{ y^{'} reduces in degree by one for each successive differentiation of the 
     polynomial. Which gets reduced to zero unless the degree of the polynomial itself is a variable, even x.
 
+   so
+   <div class="box">
+       \( Lt_{d()->0}[x!] -> 0 \)
+    </div>
+    x! has a closed-form solution that is in the factorial group
     
-    
+    <div class="box">
+       \( Lt_{d()->0}[e^{x}*x^{n}] -> ? \)
+    </div>
+    when you successively differentiate a function of \( e^x \) multiplied with any polynomial, the right side of the differential successive equations is a multiple 
+    of \( e^x \) and there is always the polynomial \( f(x) \) in the right side and possibly its derivatives. So, equations of the form 
+    \( y = e^x * x^n \)
+    require y and e^x for a closed-form solution 
+
+    Let's see the following
+    <div class="box">
+       \(  y = Lt_{d()->0}[x^x] -> ? \)
+    </div>
+
+    <div class="box">
+       \( log(y) = Lt_{d()->0}[x log(x)] -> ? \)
+    </div>
+    Successive differentiation of x log(x) leads to
+
+    <div class="box">
+       \( log(y) = +/- c/x^n -> ? \)
+    </div>
+
+    <div class="box">
+       \( Lt_{x->inf} log(y) = 0 -> ? \)
+    </div>
+
+    This makes y always 1 in \( Lt_{x->inf}Lt_{d()->0}(y) \). This defines a limit for closed-form solutions to exist. Like if y cannot be reduced to zero then 
+    one cannot even form a analytical solution for the equation. Even tough one can imagine all possible combinations of mathematical known functions. Therefore
+    approximation and numerical solutions are always a must for non-closed form solutions.
 
     Euler also had other ways to link numerical methods with the logarithmic constant e. Let me elucidate
 

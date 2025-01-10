@@ -473,7 +473,27 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
        \( Lt_{d()->0} z != 0 \)
     </div>
 
-    It makes the Gaussian integral have no analytical closed-form solution. If one redefines the limit of TSP
+    It makes the Gaussian integral have no analytical closed-form solution. 
+    </br>
+    Let's see the Fourier Transform
+    <div class="box">
+       \( In_{-inf<- x ->+inf} f(x)*e^{-2\pi \gamma x}dx \) for all gamma is real 
+    </div>
+    Fourier transform definition already has the condition 
+    (\ Lt_{d()->0} f(x) = 0 \)
+    By induction, one can prove the following cases
+    \( y = uv \)
+    where \( u = u^{'} \) results in \( y^n = u * f(u,v) \)
+    similarly,
+    \( y = uv \)
+    where \( u = au^{'} \) results in \( y^n = u * f(v,a) \)
+
+    
+    <div class="box">
+       \( Lt_{d()->0} f(v,a) \)
+    </div>
+    
+    If one redefines the limit of TSP
     <div class="box">
         \( y = Lt_{n->inf,k->n}[n!/(n-k)!]  \)
     </div>

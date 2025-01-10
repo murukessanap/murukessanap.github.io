@@ -480,19 +480,19 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
        \( In_{-inf<- x ->+inf} f(x)*e^{-2\pi \gamma i x}dx \)  
     </div>
     for all gamma is real.
-    Fourier transform definition already has the condition 
+    Fourier transform definition already has the condition </br>
     \( Lt_{d()->0} f(x) = 0 \)
-    By induction, one can prove the following cases
+    By induction, one can prove the following cases </br>
     \( y = uv \)
-    where 
+    where </br>
     \( u = u^{'} \) 
-    results in 
+    results in </br>
     \( y^n = u * f(u,v) \)
-    similarly,
+    similarly, </br>
     \( y = uv \)
-    where 
+    where </br>
     \( u = au^{'} \) 
-    results in 
+    results in </br>
     \( y^n = u * f(v,a) \)
 
     <div class="box">
@@ -500,7 +500,7 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     </div>
 
     <div class="box">
-       \( Lt_{d()->0} c(f(a))/cv + c(f(v))/ca \)  
+       \( Lt_{d()->0} [c(f(a))/cv + c(f(v))/ca] \)  
     </div>
 
     <div class="box">
@@ -528,16 +528,16 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     </div>
 
     <div class="box">
-       \( Lt_{d()->0} f(x)*e^{-2\pi i \gamma x}]] \)  
+       \( Lt_{d()->0} [f(x)*e^{-2\pi i \gamma x}] \)  
     </div>
 
-    Let
-    \( z = y^{'} = f(x)*e^{-2\pi \gamma x} \)
-    \( a = -2 \pi i \gamma \)
-    \( y^{'} = f(x) * e^{a x}
-    \( u = e^{a x}
-    \( v = f(x) \)
-    \( u^{'} = u * g(f(x), a) \) By induction
+    Let </br>
+    \( z = y^{'} = f(x)*e^{-2\pi \gamma x} \) </br>
+    \( a = -2 \pi i \gamma \) </br>
+    \( y^{'} = f(x) * e^{a x} \) </br>
+    \( u = e^{a x} \) </br>
+    \( v = f(x) \) </br>
+    \( u^{'} = u * g(f(x), a) \) By induction </br>
 
     <div class="box">
        \( Lt_{d()->0} e^{a x} g(f(x), a) \)  
@@ -550,17 +550,16 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     <div class="box">
        \( Lt_{d()->0}[e^{a x}] * 0 \)  
     </div>
-    Due to 
+    Due to </br>
     \( Lt_{d()->0}[g^{'}(f(x))] = 0 \)
-    Due to 
-    g() is polynomial in nature f(x) also reduces to 0 as per definition
+    Due to g() being polynomial in nature f(x) also reduces to 0 as per definition </br>
 
-    \( t = Lt_{d()->0}[e^{a x}] \) 
-    \( log t = Lt_{d()->0}[a x] \) 
-    \( log t = Lt_{d()->0} [2 \pi i \gamma x] \)
-    \( log t = 0 \)
-    Due to (\ i \gamma x \) are linear and in being independent variables. 
-    t = 1
+    \( t = Lt_{d()->0}[e^{a x}] \) </br>
+    \( log t = Lt_{d()->0}[a x] \) </br>
+    \( log t = Lt_{d()->0} [2 \pi i \gamma x] \) </br>
+    \( log t = 0 \) </br>
+    Due to (\ i \gamma x \) are linear and in being independent variables. </br>
+    t = 1 </br>
 
     <div class="box">
        \( Lt_{d()->0}[e^{a x}] * 0 = 1* 0 = 0 \)  

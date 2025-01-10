@@ -470,7 +470,24 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
        \( Lt_{d()->0} z != 0 -> ? \)
     </div>
 
-    It makes the Gaussian integral have no analytical closed-form solution 
+    It makes the Gaussian integral have no analytical closed-form solution. If one redefines limit of TSP
+    <div class="box">
+        \( y = Lt_{n->inf,k->n}[n!/(n-k)!]  \)
+    </div>
+    where k cannot be 0 or 1 due to k=0 no need to travel and k=n makes the graph easily solvable by the greedy algorithm of taking the shortest route each time
+    <div class="box">
+        \( y = Lt_{n->inf,k->(0,n)}[n!/(n-k)!]  \)
+    </div>
+    Apply differential limit
+    <div class="box">
+        \( y = Lt_{d()->0}Lt_{n->inf,k->n}[n!/(n-k)!]  \)
+    </div>
+    It leads to zero on the numerator and denominator, therefore indeterminate, but one can use L.Hospital rule
+    <div class="box">
+        \( y = Lt_{n->inf,k->n}[Lt_{d()->0}[n!]/Lt_{d()->0}[(n-k)!]] = 0/0  \)
+    </div>
+
+    Again, an indeterminate solution leads to no closed-form solution for TSP; therefore, P!=NP.
 
     Euler also had other ways to link numerical methods with the logarithmic constant e. Let me elucidate
 

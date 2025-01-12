@@ -713,6 +713,32 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
        \( e = E_{n=0}^{inf}[1/n!] \)
     </div>
     If you sum even five terms 1+1+1/2+1/6+1/24+1/120 = 2.7166666... which is correct up to two decimal points
+
+
+    <h1>Euler and Gauss can help to know why Universal Approximation is best done by Artificial Neural Networks</h1>
+    The Central Limit Theorem states sampling distribution leads to Gaussian when the sampling data tends to infinity.
+    Let us define sampling as a combination of k in total n samples as the following
+    <div class="box">
+       \( n!/[(n-k)!k!] \)
+    </div>
+    Where k does not equal n and does not equal zero due to at least one sample being required and all samples taken are not sampling.
+    Applying differential limit to zero.
+    <div class="box">
+       \( Lt_{d()->0} n!/[(n-k)!k!] \)
+    </div>
+    When differentiated for n
+    <div class="box">
+       \( Lt_{d()->0} n!/[(n-k)!k!] = 0/0 \)
+    </div>
+    Applying the L.Hospital rule also leads to the indeterminate solution. Therefore, only a distribution that has no closed-form solution
+    can model the sampling truly, even if data n tends to infinity like big data. That turns out to be an error-estimating Gaussian Distribution
+    <div class="box">
+       \( In e^{-x^2}dx \)
+    </div>
+    Due to \( Lt_{d()->0} e^{-x^2} \) not equals zero. Therefore no closed-form solution distribution. Therefore, Artificial Neural Networks do
+    error estimation and correction by backpropagation algorithm with loss functions suitable for the error to be estimated. Also, neural network 
+    with the power to model any function, like at least one hidden layer with a non-linear activation function at the neurons. The King of mathematics 
+    Euler and the Prince of Mathematics Gauss are still so in the artificial intelligence age.
 </body>
 </html>
 

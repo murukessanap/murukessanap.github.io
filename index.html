@@ -795,13 +795,13 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     eigenvectors of different feature spaces grow as a polynomial of n(n+1)/2 for multi-tasking, multi-modality, to artificial general intelligence 
     or AGI.
 
-    <h3>Differential Limit for attention in GPT like Transformers</h3>
+    <h1>Differential Limit for attention in GPT like Transformers</h1>
     <div class="box">
        \( Attention(Q, K, V) = Softmax(QK^T/d_{k}^0.5)V \)
     </div>
     Where Q is a query, K is the key, and V is the value. The correlation between the query and key vectors is found, and then non-linear softmax activation
     is done to multiply again with the value vector. Actually, in self-attention, all Q, K, and V are the projections of the same vector or different feature spaces
-    of the same data. In cross attention Q, K are the projections of the same vector but V value is the projection of co=related by different feature space.
+    of the same data. In cross attention, Q and K are the projections of the same vector, but the V value is the projection correlated by different feature spaces.
     
     <div class="box">
        \( Lt_{p->inf}[X_{mn} y]^p -> y \)
@@ -829,15 +829,16 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     </div>
     <div class="box">
        \( \alpha = Lt_{p->inf} Conj(p!) \)
-    </div
-    In a real number of p plane Conj(p!) = p!. But the conclusion that \( Lt_{p->inf} p! = 0 \) in the complex which in normal plane
-    is a divergent series indicating that with more correlation like self-attention, multi-modality, human language like basic alphabets
-    to repeated words to syntactic grammar, Fourier analysis of speech, and images are all great correlations to make attention-based 
-    architectures like GPT excel in even generative models. You can imagine the power of a model like the below </br>
-    Image -> Features -> self-attention -> FeaturesI
-    Language -> Features -> self-attention -> FeaturesL
-    Speech -> Features -> self-attention -> FeaturesS
-    Attention(FeaturesI, FeaturesL, FeaturesS) -> multimodal tasks
+    </div>
+    In a real number of p plane Conj(p!) = p!. But the conclusion is that 
+    \( Lt_{p->inf} p! = 0 \) in the complex, which in the  normal plane is a divergent series, indicating that with more correlation 
+    like self-attention, multi-modality, human language like basic alphabets to repeated words to syntactic grammar, 
+    Fourier analysis of speech and images are all great correlations to make attention-based architectures like GPT excel
+    in even generative models. You can imagine the power of a model like the below </br>
+    Image -> Features -> self-attention -> FeaturesI </br>
+    Language -> Features -> self-attention -> FeaturesL </br>
+    Speech -> Features -> self-attention -> FeaturesS </br>
+    Attention(FeaturesI, FeaturesL, FeaturesS) -> multimodal tasks </br>
     Some examples are DallE2 text to image, ChatGPT language to language, also data -> language </br>
     Let's welcome Artificial Intelligence into the world.
 </body>

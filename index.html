@@ -778,22 +778,68 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     <div class="box">
        \( Product_{i=1}^{n}[X_i] \)
     </div>
-    Lets us define a true feature space as v that is not changing through the successive linear multiplication of the matrices in hidden layers
+    Let us define a true feature space as v that is not changing through the successive linear multiplication of the matrices in hidden layers
     <div class="box">
        \( Lt_{d()->v} Product_{i=1}^{n}[X_i]v \)
     </div>
     <div class="box">
        \( Lt_{d()->v} Product_{i=1}^{n}[X_i]v = v n(n+1)/2 \)
     </div>
-    To reduce v n(n+1)/2 to v,  n(n+1)/2 need to be in comlpex plane
+    To reduce v n(n+1)/2 to v,  n(n+1)/2 need to be in complex plane
       
     <div class="box">
        \( v \alpha n(n+1)/2 = v \)
     </div>
-    Alpha needs to be Conj(n(n+1)/2) which if n is in real plane is n(n+1)/2. Also n may align with the multinomiality of task space due to
-    v is also in real number space in deciding if n=1, or single task then 1(1+1)/2=1 eigen vector or feature space is enough and the no of
-    eigen vectors of different feature spaces grows as polynomial of n(n+1)/2 for multi-tasking, multi-modality, to artificial general intelligence 
+    Alpha needs to be Conj(n(n+1)/2), which, if n is in the real plane, is n(n+1)/2. Also, n may align with the multinomial of task space due to
+    v is also in real number space in deciding if n=1, or single task, then 1(1+1)/2=1 eigenvector or feature space is enough and the no of
+    eigenvectors of different feature spaces grow as a polynomial of n(n+1)/2 for multi-tasking, multi-modality, to artificial general intelligence 
     or AGI.
+
+    <h3>Differential Limit for attention in GPT like Transformers</h3>
+    <div class="box">
+       \( Attention(Q, K, V) = Softmax(QK^T/d_{k}^0.5)V \)
+    </div>
+    Where Q is a query, K is the key, and V is the value. The correlation between the query and key vectors is found, and then non-linear softmax activation
+    is done to multiply again with the value vector. Actually, in self-attention, all Q, K, and V are the projections of the same vector or different feature spaces
+    of the same data. In cross attention Q, K are the projections of the same vector but V value is the projection of co=related by different feature space.
+    
+    <div class="box">
+       \( Lt_{p->inf}[X_{mn} y]^p -> y \)
+    </div>
+    The above is the limit equation for a correlation matrix \( X_{mn} \) being a Eigenvector matrix </br>
+    Applying differential limit,
+    <div class="box">
+       \( Lt_{d()->y} Lt_{p->inf}[X_{mn} y]^p -> y \)
+    </div>
+    <div class="box">
+       \( Lt_{p->inf} Lt_{d()->y} [X_{mn} y]^p -> y \)
+    </div>
+    <div class="box">
+       \( Lt_{p->inf} y Lt_{d()->y} [X_{mn}]^p -> y \)
+    </div>
+    <div class="box">
+       \( y Lt_{p->inf} p!-> y \)
+    </div>
+    This has only complex solutions like,
+    <div class="box">
+       \( y \alpha Lt_{p->inf} p!-> y \)
+    </div>
+    <div class="box">
+       \( \alpha = Conj(Lt_{p->inf} p!) \)
+    </div>
+    <div class="box">
+       \( \alpha = Lt_{p->inf} Conj(p!) \)
+    </div
+    In a real number of p plane Conj(p!) = p!. But the conclusion that \( Lt_{p->inf} p! = 0 \) in the complex which in normal plane
+    is a divergent series indicating that with more correlation like self-attention, multi-modality, human language like basic alphabets
+    to repeated words to syntactic grammar, Fourier analysis of speech, and images are all great correlations to make attention-based 
+    architectures like GPT excel in even generative models. You can imagine the power of a model like the below </br>
+    Image -> Features -> self-attention -> FeaturesI
+    Language -> Features -> self-attention -> FeaturesL
+    Speech -> Features -> self-attention -> FeaturesS
+    Attention(FeaturesI, FeaturesL, FeaturesS) -> multimodal tasks
+    Some examples are DallE2 text to image, ChatGPT language to language, also data -> language </br>
+    Let's welcome Artificial Intelligence into the world.
 </body>
 </html>
 

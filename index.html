@@ -772,6 +772,23 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
        \( Lt_{d()->0} X_n = 0 \)
     </div>
     There are only closed-form solutions possible for 1-SAT and 2-SAT, but 3-SAT and n-SAT turn out to be NP-complete.
+
+    <h1>Differential limit can explain the limit of neural networks in universal approximation</h1>
+    Let us define successive matrix multiplication of linear algebra as in artificial neural networks in deep learning as the following
+    <div class="box">
+       \( Product_{i=1}^{n}[X_i] \)
+    </div>
+    Lets us define a true feature space as v that is not changing through the successive linear multiplication of the matrices in hidden layers
+    <div class="box">
+       \( Lt_{d()->v} Product_{i=1}^{n}[X_i]v \)
+    </div>
+    <div class="box">
+       \( Lt_{d()->v} Product_{i=1}^{n}[X_i]v = v n(n+1)/2 \)
+    </div>
+    To reduce v n(n+1)/2 to v n(n+1)/2 need to be 
+    <div class="box">
+       \( v n(n+1)/2 = v \)
+    </div>
 </body>
 </html>
 

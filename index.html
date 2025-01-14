@@ -793,7 +793,7 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     Alpha needs to be Conj(n(n+1)/2), which, if n is in the real plane, is n(n+1)/2. Also, n may align with the multinomial of task space due to
     v is also in real number space in deciding if n=1, or single task, then 1(1+1)/2=1 eigenvector or feature space is enough and the no of
     eigenvectors of different feature spaces grow as a polynomial of n(n+1)/2 for multi-tasking, multi-modality, to artificial general intelligence 
-    or AGI.
+    or AGI. 
 
     <h1>Differential Limit for attention in GPT like Transformers</h1>
     <div class="box">
@@ -801,7 +801,8 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     </div>
     Where Q is a query, K is the key, and V is the value. The correlation between the query and key vectors is found, and then non-linear softmax activation
     is done to multiply again with the value vector. Actually, in self-attention, all Q, K, and V are the projections of the same vector or different feature spaces
-    of the same data. In cross attention, Q and K are the projections of the same vector, but the V value is the projection correlated by different feature spaces.
+    of the same data. In cross-attention, like in language translation, Q is the source language features, and K is the correlated features of the destination
+    language. Still, V is non-correlated destination language feature spaces.
     
     <div class="box">
        \( Lt_{p->inf}[X_{mn} y]^p -> y \)

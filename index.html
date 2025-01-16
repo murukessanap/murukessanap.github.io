@@ -845,29 +845,29 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
 
     <h1>Differential Limit algebra basics</h1>
 
-    If one takes the basic commutative associative laws like ab=ba and a(bc)=(ab)c into new light. Like the limit
+    If one takes the basic commutative, associative laws like ab=ba and a(bc)=(ab)c into a new light. Like the limit
     <div class="box">
        \( Lt_{n->inf} \Pi_{i=1}^n X_i \)
     </div>
-    When you have to select in this limit i != 0 and i != 1. Due to any algorithm to calculate addition, multiplication need to take 
-    at least two numbers as binary operation. When you apply the differential limit for this
+    When you have to select in this limit i != 0 and i != 1. Due to any algorithm to calculate addition, multiplication needs to take 
+    at least two numbers as binary operations. When you apply the differential limit for this
     <div class="box">
        \( Lt_{d()->c} Lt_{n->inf} \Pi_{i=1}^n X_i = Lt_{n->inf} n(n+1)/2 \)
     </div>
-    \( Lt_{n->inf} n(n+1)/2 \) is a natural number sum which is countably infinite the basic infinity.
-    If you also see the possbile combinations of reducing the total product into a single value by calculation with binary operations.
-    It is to chose two operations one calculation to reduce to into a single value.
+    \( Lt_{n->inf} n(n+1)/2 \) is a natural number sum that is countably infinite, the basic infinity.
+    You also see the possible combinations of reducing the total product into a single value by calculation with binary operations.
+    It is to choose two operations, one calculation to reduce to into a single value.
     <div class="box">
        \( \Pi_{i=1}^{n} a_i \)
     </div>
-    There are these many possible ways
+    There are many possible ways
     <div class="box">
        \( (n-2)C_2 +.... +1 \)
     </div>
     <div class="box">
        \(     = E_{k=2}^{n} (n-k)C_2 \)
     </div>
-    To prove by induction lets say n=2 has 2C_2 1 way of doing binary operation due to there are only two elements totally. Lets us define
+    To prove by induction, let's say n=2 has 2C_2 1 way of doing binary operation due to there being only two elements total. Lets us define
     for k and prove for k+1
     <div class="box">
        \( \Pi_{i=1}^{k} a_i has E_{l=2}^{k} (k) C_2 \)
@@ -876,7 +876,7 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     <div class="box">
        \( \Pi_{i=1}^{k+1} a_i has E_{l=2}^{k+1} (k+1) C_2 \)
     </div>
-    LHS has to reduce one possibility from k+1 to k have to have extra (k+1)C_{2}. Which is exactly 
+    LHS has to reduce one possibility from k+1 to k and have to have extra (k+1)C_{2}. Which is exactly 
     <div class="box">
        \( E_{l=2}^{k} (k)C_2 + (k+1)C_{2} \)
     </div>
@@ -885,7 +885,7 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     </div>
     Hence proved. But the proof is valid in the factorial group that defines combinations with 0! 1! and n!.
     <h2>Group algebra for differential limit</h2>
-    To define associativity commutativity for differential limit one need to define its factorial group.
+    To define associativity commutativity for differential limit, one needs to define its factorial group.
     Need to define f(x) for
     <div class="box">
        \(  Lt_{d()->1} f(x) = 1 \)
@@ -893,9 +893,29 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     <div class="box">
        \(  f(x) = X^n/n! \)
     </div>
-    So 0! 1! n! are defined. Now need to define commutativity associativity for \( Lt_{d()->x} \)
-    For Limits to be commutative and associative f(x) needs to be continous in the interval. 
-    
+    So 0! 1! n! are defined. Now, one needs to define commutativity associativity for \( Lt_{d()->x} \)
+    For Limits to be commutative and associative, f(x) needs to be continuous in the interval. 
+    If one can reduce a Taylor series to a constant, then it is a polynomial of any degree of natural numbers,
+    which is the closed-form solution whose differential limit reduction to zero in the group is a validity
+    of the associative, commutative laws of the differential limit. Also, due to the substitution of limit leading to
+    the reduced equation, the Taylor series at the substitution point is continuous, which is true in 
+    a continuous function. There are three types of continuity. They are 1) pointwise continuous, 2) continuous in
+    an interval 3) globally continuous. Any polynomial is globally continuous and, therefore, has a Taylor series differential
+    limit of zero at all points. Any continuous interval has a polynomial as Taylor series from any point in that
+    interval differential limit to zero. Any pointwise continuous has a polynomial on both sides of the point, making 
+    the sum of the differential limit zero. 
+    Let's see the Taylor series
+    <div class="box">
+       \(  f(x) = E_{n=0}^{inf} f^{n}(a)(x-a)^{n}/n! \)
+    </div>
+    Any polynomial \( x^k \) is always continuous due to the product sum of scalars is always continuous. If we define k 
+    to be in natural number space, the factorial group always justifies \( Lt_{d()->0} = 0 \).
+    This also explains why Relu and Leaky Relu, being pointwise continuous, are good activations for neural networks
+    in universal approximation. This also explains a limit to all algorithms of even physics, Quantum physics, Computers,
+    Quantum computers need to do calculations with elementary operations of addition or multiplication, either binary or
+    more superpositioned Qubits, being to be verified on any higher level by a consciousness like humans who design
+    those algorithms in their minds. Therefore Church-Turing thesis has this limit of observation leading to a limit
+    of Universal Turing Machines, both Deterministic and Non-Deterministic. 
     
 </body>
 </html>

@@ -842,6 +842,61 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     Attention(FeaturesI, FeaturesL, FeaturesS) -> multimodal tasks </br>
     Some examples are DallE2 text to image, ChatGPT language to language, also data -> language </br>
     Let's welcome Artificial Intelligence into the world.
+
+    <h1>Differential Limit algebra basics</h1>
+
+    If one takes the basic commutative associative laws like ab=ba and a(bc)=(ab)c into new light. Like the limit
+    <div class="box">
+       \( Lt_{n->inf} \Pi_{i=1}^n X_i \)
+    </div>
+    When you have to select in this limit i != 0 and i != 1. Due to any algorithm to calculate addition, multiplication need to take 
+    at least two numbers as binary operation. When you apply the differential limit for this
+    <div class="box">
+       \( Lt_{d()->c} Lt_{n->inf} \Pi_{i=1}^n X_i = Lt_{n->inf} n(n+1)/2 \)
+    </div>
+    \( Lt_{n->inf} n(n+1)/2 \) is a natural number sum which is countably infinite the basic infinity.
+    If you also see the possbile combinations of reducing the total product into a single value by calculation with binary operations.
+    It is to chose two operations one calculation to reduce to into a single value.
+    <div class="box">
+       \( \Pi_{i=1}^{n} a_i \)
+    </div>
+    There are these many possible ways
+    <div class="box">
+       \( (n-2)C_2 +.... +1 \)
+    </div>
+    <div class="box">
+       \(     = E_{k=2}^{n} (n-k)C_2 \)
+    </div>
+    To prove by induction lets say n=2 has 2C_2 1 way of doing binary operation due to there are only two elements totally. Lets us define
+    for k and prove for k+1
+    <div class="box">
+       \( \Pi_{i=1}^{k} a_i has E_{l=2}^{k} (k) C_2 \)
+    </div>
+    To prove for k+1
+    <div class="box">
+       \( \Pi_{i=1}^{k+1} a_i has E_{l=2}^{k+1} (k+1) C_2 \)
+    </div>
+    LHS has to reduce one possibility from k+1 to k have to have extra (k+1)C_{2}. Which is exactly 
+    <div class="box">
+       \( E_{l=2}^{k} (k)C_2 + (k+1)C_{2} \)
+    </div>
+    <div class="box">
+       \(     = E_{l=2}^{k+1} (k+1) C_2 \)
+    </div>
+    Hence proved. But the proof is valid in the factorial group that defines combinations with 0! 1! and n!.
+    <h2>Group algebra for differential limit</h2>
+    To define associativity commutativity for differential limit one need to define its factorial group.
+    Need to define f(x) for
+    <div class="box">
+       \(  Lt_{d()->1} f(x) = 1 \)
+    </div>
+    <div class="box">
+       \(  f(x) = X^n/n! \)
+    </div>
+    So 0! 1! n! are defined. Now need to define commutativity associativity for \( Lt_{d()->x} \)
+    For Limits to be commutative and associative f(x) needs to be continous in the interval. 
+    
+    
 </body>
 </html>
 

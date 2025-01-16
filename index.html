@@ -920,6 +920,34 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     more superpositioned Qubits, being to be verified on any higher level by a consciousness like humans who design
     those algorithms in their minds. Therefore Church-Turing thesis has this limit of observation leading to a limit
     of Universal Turing Machines, both Deterministic and Non-Deterministic. 
+
+    <h1> Differential limit in modelling series prediction </h1>
+    Let's take the Recurrent Neural Networks (RNN) equation for the hidden state, which decides the recurrence relation of 
+    any series modeled by RNN.
+    <div class="box">
+       \(  h_t = \sigma (W_x x_t + W_h h_{t-1} + b_h) \)
+    </div>
+    Let's redefine the recurrence equation 
+    <div class="box">
+       \(  [X_n y + X_{nn} h + b I]^{p} -> Z h \)
+    </div>
+    <div class="box">
+       \(  Lt_{d()->Zh}[X_n y + X_{nn} h + b I]^{p} -> ? \)
+    </div>
+    <div class="box">
+       \(      = Lt_{d()->Zh} p! [X_n y + X_{nn} h + b I] \)
+    </div>
+    Where \( X_{nn} = X_{n}^{T} X_{n} \) is a correlation matrix which captures the recurrence in words that leads to grammatical 
+    syntax.
+    <div class="box">
+       \(      = p! [ Lt_{d()->Zh} [X_n y] + Lt_{d()->Zh} [X_{n}^{T} X_{n} h] + Lt_{d()->Zh}[b I] ] \)
+    </div>
+    The first and last term leads to \( Z y \). The second term \( X_{n}^{T} X_{n} h \) where \( X_{n}^{T} X_{n} \) is a symmetric
+    matrix whose eigenvectors are all orthonormal. This means the resulting sum of eigenvectors can have these eigenvectors as base
+    vectors approximately more than the first and the second terms eigenvectors. Therefore, this explains the recurrence of deciding
+    the syntax like grammar in context-sensitive natural language to non-context-sensitive programming language, decides the basis of 
+    the series in RNN to either do classification or generation. This also applies to series like time series, climate prediction, 
+    video generation, audio generation, music generation, and so on.
     
 </body>
 </html>

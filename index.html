@@ -748,8 +748,9 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     seems to be better and better with more power and more clear big data. The King of Mathematics, Euler, and the Prince of Mathematics, Gauss, are still so in the artificial intelligence age.
 
     <h1>Differential Limit can solve circuit satisfiability NP-Complete problem </h1>
-    SAT problem is if there is a long circuit which is boolean anded together to form a long chain of boolean variables like </br>
-    (x&y|z)&(x|y|z)&(x&y&z)&(!x&y&!z).... </br>
+    SAT problem is if there is a long circuit which is boolean anded together as CNF form of gates. It is conjunction of (and) of lot of (or) disjunction
+    and with (not) gate any universal gates can be represented in this form. Let a CNF form of long chain of boolean variables like </br>
+    (x|!y|z)&(!x|y|z)&(x|y|!z)&(!x|y|!z).... </br>
     If you can find a set of x,y, and z, that solves this problem like it gives the value 1 in the whole equation. It is one way of control of all the electronic logical gates, and if it is not possible
     the electronic system is not a complete system on its own. Using differential limit towards zero limits. Having each component of & operation as a unique variable lets define SAT
     <div class="box">
@@ -759,18 +760,15 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     <div class="box">
        \( Lt_{d()->0} Lt_{n->inf}Prod_{i=1}^{n} X_i = 0 \)
     </div>
-    Due to the independent nature of each X, the product sum successively reduces to a -1 degree polynomial each time to reach zero. So, no closed-form solution is possible for this equation, and 
+    Due to the independent nature of each X, the product sum successively reduces to a -1 degree polynomial each time to reach zero. There is no way to reduce it to 
+    to n!. This makes no factorial group excpet 0! 1! for this differential limit. So, no closed-form solution is possible for this equation, and 
     numerical optimization and approximation to neural networks focus on the overlap of the circuits or each X to reduce the problem from n-SAT to lesser n to be also manually solved. </br>
     So, identity in this formulation is 
     <div class="box">
-       \( Lt_{d()->x} [X_n/n!] = X \)
+       \( Lt_{d()->c} [X^n] = n! \)
     </div>
-    <div class="box">
-       \( Lt_{d()->1} [X_n/n!] = 1 \)
-    </div>
-    <div class="box">
-       \( Lt_{d()->0} X_n = 0 \)
-    </div>
+    Only \( X^n \) only reduces to n! which means all \( X_i \) has to be equal which makes it a single X due to if you (and) 0 or 1 with itself it is the same.
+    This takes the conjunction out of the equation making it less universal logic gates which require AND OR and NOT. 
     There are only closed-form solutions possible for 1-SAT and 2-SAT, but 3-SAT and n-SAT turn out to be NP-complete.
 
     <h1>Differential limit can explain the limit of neural networks in universal approximation</h1>

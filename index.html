@@ -860,26 +860,26 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     </div>
     There are many possible ways
     <div class="box">
-       \( (n-2)C_2 + (n-3)C_3 + .... + 1 \)
+       \( (n-1)C_2 + (n-2)C_3 + .... + 1 \)
     </div>
     <div class="box">
-       \(     = E_{k=2}^{n} (n-k)C_2 \)
+       \(     = E_{k=1}^{n} (n-k)C_2 \)
     </div>
     To prove by induction, let's say n=2 has \( 2C_2 \) as one way of doing binary operation due to there being only two elements total. Lets us define
     for k and prove for k+1
     <div class="box">
-       \( \Pi_{i=1}^{k} a_i has E_{l=2}^{k} (k-l) C_2 \)
+       \( \Pi_{i=1}^{k} a_i has E_{l=1}^{k} (k-l) C_2 \)
     </div>
     To prove for k+1
     <div class="box">
-       \( \Pi_{i=1}^{k+1} a_i has E_{l=2}^{k+1} (k-l+1) C_2 \)
+       \( \Pi_{i=1}^{k+1} a_i has E_{l=1}^{k+1} (k-l+1) C_2 \)
     </div>
     LHS has to reduce one possibility from k+1 to k and have to have extra \( (k-l+1)C_{2} \). Which is exactly 
     <div class="box">
-       \( E_{l=2}^{k} (k-l)C_2 + (k-l+1)C_{2} \)
+       \( E_{l=1}^{k} (k-l)C_2 + (k-l+1)C_{2} \)
     </div>
     <div class="box">
-       \(     = E_{l=2}^{k+1} (k-l+1) C_2 \)
+       \(     = E_{l=1}^{k+1} (k-l+1) C_2 \)
     </div>
     Hence proved. But the proof is valid in the factorial group that defines combinations with 0! 1! and n!.
     

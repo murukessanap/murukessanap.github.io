@@ -929,8 +929,12 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     where \( e^{-2 \pi i} = 1 \) so \( (e^{-2 \pi i})^{\alpha x} \) so the complex term reduces in the equation. The complex 
     number i property is such its even powers reduces to +/- 1 and its odd powers reduces to +/- i. Therefore even \( e^{ix} \)
     reduces to zero when applying differential limit of complex number i \( Lt_{d_{i}()->0} \) also in the interval [0,inf] after
-    expanding by Taylor series. But the term like power of e, (ix) where x need to be real and have no complex roots so that there
-    is a requirement of differential limit of complex to zero to the Taylor series. Like \( e^{i(x^2+1)} \) is not a good choice
+    expanding by Taylor series. But the term like power of e, (ix) where range of x need to be real and have no complex roots so that there
+    is a requirement of differential limit of complex to zero to the Taylor series. Like \( e^{i(x^2)} \) is not a good choice due to 
+    x even if real \( x^2 \) has a complex root for \( x^2 = -1 \). So if the poynomial has a real root other than zero in polynomial
+    it turns out to be a closed form. Also a easy way to find closed form polynomial eqaution is to substitute i in x to see 
+    if complex numbers becoming conjugates or squared gets cancelled to turn completely real. If it turns completely real then
+    those polynomials are closed form solutions. One need to rule out zero roots of the polynomials in this approach.
 
     <h1> Differential limit in modelling series prediction </h1>
     Let's take the Recurrent Neural Networks (RNN) equation for the hidden state, which decides the recurrence relation of 

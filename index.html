@@ -934,7 +934,20 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     x even if real \( x^2 \) has a complex root for \( x^2 = -1 \). So if the polynomial has a real root other than zero in polynomial
     it turns out to be a closed form. Also a easy way to find closed form polynomial eqaution is to substitute i in x to see 
     if complex numbers becoming conjugates or squared gets cancelled to turn completely real. If it turns completely real then
-    those polynomials are not closed form solutions. One need to rule out zero roots of the polynomials in this approach. If one
+    those polynomials are not closed form solutions. If it turns completely complex like real part of that complex is zero then it
+    it is a closed form. If turns complex with real and imaginary parts then differential limit of i reduces it to only real part. 
+    That makes the equaltion Imag(real) = 0 to be the solution. This solution requires integration along the whole complex number
+    plane with same real part. This is more similar to Fourier Transform and Fourier Inverse Transform. But in reality of Fourier
+    Transform applications like sampling images to audio for compression for telecommunications there is no integration over infinities.
+    But only discrete transform resulting in taking the magnitude of the complex number for approximation. It is like integrating in the
+    complex plane from one smaller circle to a bigger circle for an approximation of sampling. One can see a close resemblance of this
+    differential limit od complex number i to zero group algebra in the Euler equation of \( e^{- \pi i} + 1 = 0 \). The tools in this
+    equation makes the complete set for the approximation like (e, i, pi) or (sin, cos, i ,pi) or (log, i, pi) are complete sets 
+    required for a good approximation. So even for extending closed form solutions for an approximation with the help of complex 
+    number systems one needs to use mathematical constants e and pi. Therefore this also limits the wave functions extending beyond
+    closed form solutions and numerical approxiamtions for a perfect measurements which ultimately needs algorithms of any equations 
+    by memory and mathematical operations of basic arithmetics. </br></br>
+    Also, one need to rule out zero roots of the polynomials in this approach. If one
     sees validity of applying \( Lt_{d_{i}()->0} \) it is in defining 0! 1! n! for complex numbers. 
     <div class="box">
        \( Lt_{d_{i}()->c}[\alpha \alpha^{'} / {|\alpha|}^2] = 1 \)

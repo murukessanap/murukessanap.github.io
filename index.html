@@ -921,12 +921,16 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
 
     <h1>Closed Form Solution approach</h1>
     Since one can reduce \( e^x \) to zero when applying differential limit to zero by expanding Taylor series due to series
-    expands to all natural number powers of x. But if x can be a polynomial of z, like a sub function then the subfunction in
+    expands to all natural number powers of x except at the limit of infinity [0,inf). But if x can be a polynomial of z, like a sub function then the subfunction in
     z must have a root in real number space. Without this condition there is no way to reduce the differential limit to zero
     after the function of z, x=f(z) gets replaced in the equation. But if there are complex roots then one needs \( Lt_{d_{i}()->0} \)
     also in the differential limit to reduce to zero. But if you have to remove the complex number for real number space
     applications it should reduce to real number like in Fouries series \( In_{-inf<-x->+inf} e^{-2 \pi i \alpha x} f(x) \)
-    where \( e^{-2 \pi i} = 1 \) so \( (e^{-2 \pi i})^{\alpha x} \) so the complex term reduces in the equation.
+    where \( e^{-2 \pi i} = 1 \) so \( (e^{-2 \pi i})^{\alpha x} \) so the complex term reduces in the equation. The complex 
+    number i property is such its even powers reduces to +/- 1 and its odd powers reduces to +/- i. Therefore even \( e^{ix} \)
+    reduces to zero when applying differential limit of complex number i \( Lt_{d_{i}()->0} \) also in the interval [0,inf] after
+    expanding by Taylor series. But the term like power of e, (ix) where x need to be real and have no complex roots so that there
+    is a requirement of differential limit of complex to zero to the Taylor series. Like \( e^{i(x^2+1)} \) is not a good choice
 
     <h1> Differential limit in modelling series prediction </h1>
     Let's take the Recurrent Neural Networks (RNN) equation for the hidden state, which decides the recurrence relation of 

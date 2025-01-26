@@ -1013,6 +1013,19 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     the syntax like grammar in context-sensitive natural language to non-context-sensitive programming language, decides the basis of 
     the series in RNN to either do classification or generation. This also applies to series like time series, climate prediction, 
     video generation, audio generation, music generation, and so on.
+
+    <h1>Convolutional Neural Networks</h1>
+    Convolutional neural networks gave the much-needed hiatus for Artificial Neural Networks, winning the ImageNet challenge by a large margin.
+    Thanks to Yann LeCun, Geoffrey Hinton, and their team for bringing AlexNet. It leads to an evolution of ANN becoming the engine of growth
+    in various industries. Below is the convolution operation in mathematical terms,
+    <div class="box">
+       \(  (f*g)(t) = In_{-inf<-x->+inf} f(x)g(t-x)dx \)
+    </div>
+    In convolutional neural networks, the image input is always a matrix and remains the same, but it goes to deep levels of convolution. Let's redefine
+    convolution as below,
+    <div class="box">
+       \(  (f*g)(t) = Lt_{d()->0} \Pi_{i=1}^{inf} [I(x) G(t-x)]_i dx \)
+    </div>
     
 </body>
 </html>

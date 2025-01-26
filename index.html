@@ -1024,8 +1024,25 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
     In convolutional neural networks, the image input is always a matrix and remains the same, but it goes to deep levels of convolution. Let's redefine
     convolution as below,
     <div class="box">
-       \(  (f*g)(t) = Lt_{d()->0} \Pi_{i=1}^{inf} [I(x) G(t-x)]_i dx \)
+       \(  (f*g)_{i}(t) = Lt_{d()->y} Lt_{i->inf} [E(I_{p_i} * G_{p_i})]^i \)
     </div>
+    When \( I_p_i \) is the sub-feature image of depth i, \( G_p_i \) is the kernel at depth i. Successive reduction to a few values is the final
+    feature vector needed. Applying the differential limit, we get,
+    <div class="box">
+       \(    = Lt_{i->inf} Lt_{d()->y} i! [E(I_{p_i} * G_{p_i})] \)
+    </div>
+
+    <div class="box">
+       \(    = Lt_{i->inf} Lt_{d()->y} i! [w_1 * x_1 + w_2 * x_2 + w_3 * x_3 ...] \)
+    </div>
+
+    <div class="box">
+       \(    = Lt_{i->inf} Lt_{d()->y} i! y \)
+    </div>
+    Therefore, the convolutions reduce the image to a single eigenvector of feature space that doesn't change for all the images fed for training the
+    convolutional neural networks. More eigenvectors of highly orthonormal spaces could scale computer vision by artificial neural networks
+    with convolutions.
+     
     
 </body>
 </html>

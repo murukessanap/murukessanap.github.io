@@ -1016,7 +1016,7 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
 
     <h1>Convolutional Neural Networks</h1>
     Convolutional neural networks gave the much-needed hiatus for Artificial Neural Networks, winning the ImageNet challenge by a large margin.
-    Thanks to Yann LeCun, Geoffrey Hinton, and their team for bringing AlexNet. It leads to an evolution of ANN becoming the engine of growth
+    Thanks to Yann LeCun, Geoffrey Hinton, and their team for bringing AlexNet. It led to an evolution of ANN becoming the engine of growth
     in various industries. Below is the convolution operation in mathematical terms,
     <div class="box">
        \(  (f*g)(t) = In_{-inf<-x->+inf} f(x)g(t-x)dx \)
@@ -1027,7 +1027,7 @@ Randomized initial weights of the matrices \(M_u\) and \(M_m\) are updated via g
        \(  (f*g)_{i}(t) = Lt_{d()->y} Lt_{i->inf} [E(I_{p_i} * G_{p_i})]^i \)
     </div>
     When \( I_{p_i} \) is the sub-feature image of depth i, \( G_{p_i} \) is the kernel at depth i. Successive reduction to a few values is the final
-    feature vector needed. Applying the differential limit, we get,
+    feature vector y needed. Applying the differential limit, we get,
     <div class="box">
        \(    = Lt_{i->inf} Lt_{d()->y} i! [E(I_{p_i} * G_{p_i})] \)
     </div>
